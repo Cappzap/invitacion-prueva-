@@ -1,0 +1,28 @@
+body {
+  margin: 0;
+  font-family: sans-serif;
+  scroll-behavior: smooth;
+}
+
+.story {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  text-align: center;
+  background: #f5f5f5;
+}
+
+#intro {
+  background: linear-gradient(to bottom, #a1c4fd, #c2e9fb);
+}
+
+#info {
+  background: linear-gradient(to bottom, #fbc2eb, #a6c1ee);
+}
+
+#lugar {
+  background: linear-gradient(to bottom, #fcd5ce, #f8edeb);
+}
