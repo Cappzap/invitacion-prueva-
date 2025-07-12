@@ -1,27 +1,20 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Invitación Interactiva</title>
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body>
-  <section class="story" id="intro">
-    <h1>¡Estás invitado!</h1>
-    <p>Desliza hacia abajo para descubrir más.</p>
-  </section>
+<video id="myVideo" width="100%" muted>
+  <source src="video.mp4" type="video/mp4">
+  Tu navegador no soporta el video.
+</video>
 
-  <section class="story" id="info">
-    <h2>¿Cuándo?</h2>
-    <p>El 25 de agosto, a las 7:00 PM.</p>
-  </section>
+<script>
+  const video = document.getElementById('myVideo');
 
-  <section class="story" id="lugar">
-    <h2>¿Dónde?</h2>
-    <p>En Casa Jardín, CDMX.</p>
-  </section>
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        video.play();
+      } else {
+        video.pause();
+      }
+    });
+  }, { threshold: 0.5 });
 
-  <script src="script.js"></script>
-</body>
-</html>
+  observer.observe(video);
+</script>
